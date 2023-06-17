@@ -10,9 +10,10 @@ public class DesignTimeApplicationDbContextFactory : IDesignTimeDbContextFactory
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
         var config = GetConfiguration();
-        
-        var connectionString = config.GetConnectionString("DefaultConnection") ??
-                               throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+        var connectionString = config[UserSecretConstants.DefaultConnection] ??
+                               throw new InvalidOperationException(
+                                   $"Connection string {nameof(UserSecretConstants.DefaultConnection)} not found.");
 
         var version = ServerVersion.AutoDetect(connectionString);
 
@@ -24,9 +25,7 @@ public class DesignTimeApplicationDbContextFactory : IDesignTimeDbContextFactory
     private static IConfiguration GetConfiguration()
     {
         ConfigurationBuilder builder = new();
-        var currentDirectory = Directory.GetCurrentDirectory();
-        var appSettingsPath = Path.Combine(currentDirectory, "appsettings.json");
-        builder.AddJsonFile(appSettingsPath);
+        builder.AddUserSecrets<Program>();
         var config = builder.Build();
         return config;
     }
