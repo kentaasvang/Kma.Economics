@@ -1,6 +1,6 @@
 namespace Kma.Economy;
 
-public class UserSecretConstants
+public static class UserSecretConstants
 {
     public const string DefaultConnection = "ConnectionString:DefaultConnection";
 }
