@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kma.Economy", "Kma.Economy\Kma.Economy.csproj", "{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
