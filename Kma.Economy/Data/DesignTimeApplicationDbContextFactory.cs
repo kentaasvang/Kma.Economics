@@ -10,9 +10,10 @@ public class DesignTimeApplicationDbContextFactory : IDesignTimeDbContextFactory
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
         var config = GetConfiguration();
-        
-        var connectionString = config["ConnectionString:DefaultConnection"] ??
-                               throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+        var connectionString = config[UserSecretConstants.DefaultConnection] ??
+                               throw new InvalidOperationException(
+                                   $"Connection string {nameof(UserSecretConstants.DefaultConnection)} not found.");
 
         var version = ServerVersion.AutoDetect(connectionString);
 
