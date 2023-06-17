@@ -1,6 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kma.Economy", "Kma.Economy\Kma.Economy.csproj", "{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dockerfiles", "Dockerfiles", "{49D0E17B-6C94-48F5-A1C4-A53D74ED053A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{70018CF1-E4DE-4B3F-BB4E-E9AB5F4B7D52}"
+	ProjectSection(SolutionItems) = preProject
+		updateDatabase.ps1 = updateDatabase.ps1
+		addMigration.ps1 = addMigration.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{EB45974D-EF24-4DB1-B085-3CBF8859619F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kma.Economy", "Kma.Economy\Kma.Economy.csproj", "{CAE04899-7C91-4746-A6E6-C1B19325647A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +21,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3CC8F91-CF53-4C35-B116-CEF55A6DBFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE04899-7C91-4746-A6E6-C1B19325647A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE04899-7C91-4746-A6E6-C1B19325647A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE04899-7C91-4746-A6E6-C1B19325647A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE04899-7C91-4746-A6E6-C1B19325647A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAE04899-7C91-4746-A6E6-C1B19325647A} = {EB45974D-EF24-4DB1-B085-3CBF8859619F}
 	EndGlobalSection
 EndGlobal
