@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kma.Economy.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230617095918_CreateIdentitySchema")]
+    [Migration("20230617110305_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         /// <inheritdoc />
